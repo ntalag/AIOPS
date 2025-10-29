@@ -70,6 +70,9 @@ const BUILD_DIR = path.resolve(
   __dirname,
   isCordova ? './cordova/www' : './www',
 );
+const aiops_allowedHosts= process.env.AIOPS_ALLOWED_HOSTS || ['aiopsui-aiops.apps.cluster-wkq7q.wkq7q.sandbox2937.opentlc.com','localhost:8000']
+// const aiops_allowedHosts=import.meta.env.AIOPS_ALLOWED_HOSTS
+
 export default async () => {
 
   return  {
@@ -103,7 +106,7 @@ export default async () => {
     server: {
       host: true,
       cors: false,
-      allowedHosts: ['aiopsui-aiops.apps.cluster-wkq7q.wkq7q.sandbox2937.opentlc.com']
+      allowedHosts: aiops_allowedHosts, //['aiopsui-aiops.apps.cluster-wkq7q.wkq7q.sandbox2937.opentlc.com']
     },
     esbuild: {
       jsxFactory: '$jsx',

@@ -22,7 +22,8 @@ import App from '../app.f7';
 
 
 var device = getDevice();
-var baseurl="http://100.69.84.37:8080";
+// var baseurl="http://100.69.84.37:8080";
+
 
 
 
@@ -31,6 +32,7 @@ var app = new Framework7({
      return {
         errorlist:{}
      }
+     
   },
   methods: {
     loadallerrors: function() {

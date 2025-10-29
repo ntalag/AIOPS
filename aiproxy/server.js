@@ -10,7 +10,7 @@ import { exitCode } from 'process';
 
 config(); 
 const app = express();
-const port = process.env.aiporxyport || '8002';
+const port = process.env.AIOPS_PROXY_PORT || '8002';
 
 
 app.use(cors());
@@ -21,8 +21,8 @@ app.post('/api/generate', async (req, res) => {
   try {
     //process.env.geminiapiKey 
     //const apiKey ='AIzaSyBwHJbpEFvAKikUwTOM0pzTkeAtfK8Fn-8';
-    const apiKey =  process.env.geminiapiKey  || 'AIzaSyBwHJbpEFvAKikUwTOM0pzTkeAtfK8Fn-8';
-    const geminiurl =  process.env.geminiUrl  ||'https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=';
+    const apiKey =  process.env.AIOPS_GEMINI_API_KEY  || 'AIzaSyBwHJbpEFvAKikUwTOM0pzTkeAtfK8Fn-8';
+    const geminiurl =  process.env.AIOPS_GEMINI_URL  ||'https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=';
     prompt = req.body;
     //  console.log(prompt);
     // const data = prompt

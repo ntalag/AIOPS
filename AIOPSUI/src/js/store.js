@@ -1,14 +1,22 @@
 
 import { createStore } from 'framework7';
 
+
+
+// const aiops_baseurl= import.meta.env.VITE_AIOPS_BASE_URL;
+// const aiops_aiproxybaseurl= import.meta.env.VITE_AIOPS_AIPROXY_URL;
+// console.log(import.meta.env)
+// console.log( aiops_baseurl);
+// console.log("ai url:" + aiops_aiproxybaseurl);
+
 const store = createStore({
   state: {
-    // baseurl: "http://localhost:8080",
-    // aiproxybaseurl: "http://localhost:8002",
+    baseurl: "http://localhost:8080",
+    aiproxybaseurl: "http://localhost:8002",
     // baseurl: "http://localhost:8080", 
     // aiproxybaseurl: "http://localhost:8002",
-    baseurl: "http://aiops-qks-aiops.apps.cluster-wkq7q.wkq7q.sandbox2937.opentlc.com", //var baseurl="http://100.69.84.37:8080";
-    aiproxybaseurl: "http://aiproxy-aiops.apps.cluster-wkq7q.wkq7q.sandbox2937.opentlc.com",
+    // baseurl: aiops_baseurl, // "http://aiops-qks-aiops.apps.cluster-wkq7q.wkq7q.sandbox2937.opentlc.com", //var baseurl="http://100.69.84.37:8080";
+    // aiproxybaseurl: aiops_aiproxybaseurl ,//"http://aiproxy-aiops.apps.cluster-wkq7q.wkq7q.sandbox2937.opentlc.com",
     products: [
       {
         id: '1',
